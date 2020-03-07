@@ -25,5 +25,8 @@ echo 'Deploying....'
 }
 }
 }
-
+post {
+always {
+emailext body: 'Jenkins', subject: 'Hello from Jebbkins', to: 'ayoub.gammarr@gmail.com'}
+}
 }
