@@ -1,0 +1,29 @@
+   pipeline {
+agent any
+stages {
+stage('Clone project') {
+steps {
+script {
+git 'https://github.com/AyoubGammar/3INFOGL.git'
+echo "clone done"
+}
+}
+}
+stage('Build') {
+steps {
+echo 'Building..'
+}
+}
+stage('Test') {
+steps {
+echo 'Testing..'
+}
+}
+stage('Deploy') {
+steps {
+echo 'Deploying....'
+}
+}
+}
+
+}
