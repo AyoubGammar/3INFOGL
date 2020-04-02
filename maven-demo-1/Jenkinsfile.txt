@@ -1,15 +1,6 @@
    pipeline {
 agent any
-stages {
-stage('Clone project') {
-steps {
-script {
-git 'https://github.com/AyoubGammar/3INFOGL.git'
-echo "clone done"
-}
-}
-}
-  environment {
+ environment {
         // This can be nexus3 or nexus2
         NEXUS_VERSION = "nexus3"
         // This can be http or https
@@ -21,6 +12,15 @@ echo "clone done"
         // Jenkins credential id to authenticate to Nexus OSS
         NEXUS_CREDENTIAL_ID = "admin"
     }
+stages {
+stage('Clone project') {
+steps {
+script {
+git 'https://github.com/AyoubGammar/3INFOGL.git'
+echo "clone done"
+}
+}
+}
 stage('Build') {
 steps {
 echo 'Building..'
