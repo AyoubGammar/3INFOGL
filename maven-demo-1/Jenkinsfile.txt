@@ -88,7 +88,3 @@ always {
 emailext body: 'Jenkins', subject: 'Hello from Jebbkins', to: 'ayoub.gammarr@gmail.com'}
 }
 }
-
-
-
-
