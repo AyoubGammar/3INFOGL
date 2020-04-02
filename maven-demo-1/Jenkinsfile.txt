@@ -33,6 +33,7 @@ echo 'Testing..'
 stage('Deploy') {
 steps {
 echo 'Deploying....'
+bat label: '', script: 'cd maven-demo-1'
 }
 }
         stage("publish to nexus") {
