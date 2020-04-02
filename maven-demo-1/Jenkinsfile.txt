@@ -23,8 +23,9 @@ echo "clone done"
 }
 stage('Build') {
 steps {
-bat label: '', script: '''cd ./maven-demo-1
-mvn clean install'''
+bat """cd maven-demo-1
+mvn clean install
+        """
 }
 }
 stage('Test') {
